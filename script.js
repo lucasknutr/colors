@@ -24,6 +24,7 @@ function sortNumber () {
     return number;
 }
 
+
 generateBackground();
 let number = sortNumber();
 
@@ -33,10 +34,14 @@ colorBoxes.forEach(element => {
     element.addEventListener("click", function () {
         if (element.style.background === colorBoxes[number].style.background) {
             alert("YOU WIN!");
+            generateBackground();
+            sortNumber();
+
         }
 
         else {
             alert("NOPE!");
+            element.style.background = "white";
         }
     })
 })

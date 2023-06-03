@@ -1,10 +1,13 @@
 body {
     padding: 0;
     margin: 0 auto;
+    background-color: #14063A;
 }
 
 h1 {
     text-transform: uppercase;
+    text-align: center;
+    padding: 5% 0;
 }
 
 .container {
@@ -12,14 +15,19 @@ h1 {
     grid: minmax(400px, min-content) / repeat(auto-fill);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    gap: 40px;
     width: 60vw;
     height: 120vh;
-    border: 3px solid black;
+    /* border: 3px solid black; */
 }
 
 .color-box {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     border-radius: 100%;
+    transition: 0.55s all;
+}
 
+.color-box:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
