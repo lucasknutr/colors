@@ -3,6 +3,10 @@ body {
     margin: 0 auto;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 .container {
     display: grid;
     grid: minmax(400px, min-content) / repeat(auto-fill);
