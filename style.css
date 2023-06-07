@@ -12,10 +12,10 @@ h1 {
 
 .container {
     display: grid;
-    grid: minmax(400px, min-content) / repeat(auto-fill);
+    grid: minmax(min-content, min-content) / repeat(auto-fill);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 40px;
+    gap: 5%;
     width: 60vw;
     height: 120vh;
     /* border: 3px solid black; */
@@ -30,4 +30,11 @@ h1 {
 .color-box:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+#rgb {
+    color: cyan;
+    font-weight: 900;
+    font-size: 1.3em;
+    -webkit-text-stroke: 1px black;
 }

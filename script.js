@@ -1,23 +1,27 @@
 let colorBoxes = document.querySelectorAll(".color-box");
 let rgbTextDisplay = document.getElementById("rgb");
 
-function generateColors () {
+// Generates random RGB values \ Gera valores RGB aleatórios
+
+const generateColors = () => {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
 
-    return "rgb(" + r + ", " + g + ", " + b + ")";
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
-// colorBoxes.forEach(element => {
-//     element.style.background = generateColors();
-// })
 
-function generateBackground () {
+// Inputs the random rgb values in each background of the circles \ coloca cor no background de cada um dos círculos
+
+const generateBackground = () => {
     for (i = 0; i < 9; i++) {
         colorBoxes[i].style.background = generateColors();
     }
 }
+
+// Sorts number from 0 to 8, will be used to determine which circle is the correct one
+// Sorteia um número de 0 a 8, será utilizado como valor da array correta
 
 function sortNumber () {
     let number = Math.floor(Math.random() * 9);
@@ -36,7 +40,7 @@ colorBoxes.forEach(element => {
             alert("YOU WIN!");
             generateBackground();
             sortNumber();
-
+            rgbTextDisplay.textContent = colorBoxes[number].style.background;
         }
 
         else {
