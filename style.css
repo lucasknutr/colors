@@ -12,9 +12,9 @@ h1 {
 
 .container {
     display: grid;
-    grid: minmax(min-content, min-content) / repeat(auto-fill);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    /* grid: minmax(1fr, max-content) / repeat(auto-fill); */
+    grid-template-columns: repeat(3, 1fr) minmax(40vh, max-content);
+    grid-template-rows: repeat(3, 1fr) minmax(20vw, max-content);
     gap: 5%;
     width: 60vw;
     height: 120vh;
